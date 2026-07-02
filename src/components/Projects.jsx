@@ -1,20 +1,16 @@
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Layers } from 'lucide-react';
 import { GitHubIcon } from './BrandIcons';
 
 const Projects = () => {
-  const [filter, setFilter] = useState('All');
-
-  const categories = ['All', 'Frontend', 'Fullstack', 'Mobile'];
 
   const projects = [
     {
-      title: 'NexTrade E-Commerce',
-      description: 'A cutting-edge shopping experience with real-time inventory and global payments.',
+      title: 'React Portfolio',
+      description: 'A clean and responsive developer portfolio built using React.js and Tailwind CSS. It highlights my technical skills, featured projects, and professional journey with a fast and user-friendly interface.',
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       category: 'Fullstack',
-      tech: ['Next.js', 'Stripe', 'PostgreSQL'],
+      tech: ['React', 'Tailwind'],
       liveUrl: '#',
       githubUrl: '#'
     },
@@ -65,10 +61,6 @@ const Projects = () => {
     }
   ];
 
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
-
   return (
     <section id="projects" className="py-24 bg-transparent relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -80,26 +72,9 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm uppercase tracking-widest font-bold text-accent-500 mb-4">Portfolio</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-white mb-12">
+          <h3 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-12">
             Featured <span className="text-gradient">Projects</span>
           </h3>
-
-          {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 border ${
-                  filter === cat 
-                    ? 'bg-primary-500 border-primary-500 text-white shadow-[0_0_20px_rgba(99,102,241,0.4)]' 
-                    : 'bg-white/5 border-white/10 text-zinc-400 hover:border-white/20'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div 
@@ -107,7 +82,7 @@ const Projects = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.title}
                 layout
@@ -125,11 +100,6 @@ const Projects = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent" />
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-dark/50 backdrop-blur-md border border-white/10 text-[10px] font-bold text-zinc-300 uppercase tracking-widest">
-                    {project.category}
-                  </div>
                 </div>
 
                 {/* Content */}
