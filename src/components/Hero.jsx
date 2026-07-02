@@ -37,7 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent px-4">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent px-4 pt-28 pb-12 sm:pt-0 sm:pb-0">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[10%] left-[5%] w-[40rem] h-[40rem] bg-primary-500/10 rounded-full blur-[120px] animate-pulse" />
@@ -96,7 +96,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="btn-secondary"
           >
-            View CV
+            My resume
             <Download size={20} />
           </a>
         </motion.div>

@@ -156,10 +156,6 @@ const Projects = () => {
                       <ExternalLink size={18} />
                       <span>Live</span>
                     </a>
-                    <a href={project.githubUrl} className="flex items-center gap-2 text-zinc-500 font-bold hover:text-white transition-colors">
-                      <GitHubIcon size={18} />
-                      <span>Repo</span>
-                    </a>
                   </div>
                 </div>
               </motion.div>

@@ -66,7 +66,7 @@ const Navbar = () => {
         {/* Logo */}
         <motion.div 
           whileHover={{ scale: 1.05 }}
-          className="text-2xl font-black bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 bg-clip-text text-transparent cursor-pointer whitespace-nowrap"
+          className="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 bg-clip-text text-transparent cursor-pointer whitespace-nowrap"
           onClick={() => scrollToSection('home')}
         >
           Ahmad Hassan Zafar
