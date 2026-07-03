@@ -7,6 +7,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { useTheme } from '../contexts/ThemeContext';
+import websiteData from '../data/websiteData.json';
 
 const Home = () => {
   const { isDarkMode } = useTheme();
@@ -16,13 +17,13 @@ const Home = () => {
       isDarkMode ? 'bg-dark text-white' : 'bg-light text-gray-900'
     }`}>
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Hero data={websiteData.hero} />
+      <About data={websiteData.about} />
+      <Services data={websiteData.services} />
+      <Skills data={websiteData.skills} />
+      <Projects data={websiteData.projects} />
+      <Contact data={websiteData.contact} />
+      <Footer data={websiteData.footer} />
     </div>
   );
 };

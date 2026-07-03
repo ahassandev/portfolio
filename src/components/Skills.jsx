@@ -1,28 +1,6 @@
 import { motion } from 'framer-motion';
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Technologies",
-      skills: [
-        { name: 'HTML', level: 95 },
-        { name: 'CSS', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'React.js', level: 90 },
-        { name: 'Tailwind CSS', level: 95 }
-      ]
-    },
-    {
-      title: "Tools & Techniques",
-      skills: [
-        { name: 'GitHub', level: 90 },
-        { name: 'Vite', level: 95 },
-        { name: 'Antigravity', level: 90 },
-        { name: 'Figma', level: 85 },
-        { name: 'Postman', level: 88 }
-      ]
-    }
-  ];
+const Skills = ({ data: skillCategories }) => {
 
   return (
     <section id="skills" className="py-24 bg-transparent relative">

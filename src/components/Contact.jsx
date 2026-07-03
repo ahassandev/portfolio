@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, MessageSquare, Send, CheckCircle, MapPin, Phone } from 'lucide-react';
 
 
-const Contact = () => {
+const Contact = ({ data }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,11 +23,13 @@ const Contact = () => {
     }, 2000);
   };
 
-  const contactInfo = [
-    { icon: <Mail className="text-primary-500" />, label: 'Email', value: 'ahassandevx@gmail.com' },
-    { icon: <Phone className="text-secondary-500" />, label: 'Phone', value: '+92 327 1888082'},
-    { icon: <MapPin className="text-accent-500" />, label: 'Location', value: 'Sahiwal, Pakistan' },
-  ];
+  const iconMap = {
+    Mail: <Mail className="text-primary-500" />,
+    Phone: <Phone className="text-secondary-500" />,
+    MapPin: <MapPin className="text-accent-500" />
+  };
+
+  const contactInfo = data.info.map(item => ({ ...item, icon: iconMap[item.icon] }));
 
   return (
     <section id="contact" className="py-24 bg-transparent relative overflow-hidden">

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ data }) => {
   const [text, setText] = useState('');
-  const roles = ["Frontend Web Developer", "React Developer",];
+  const roles = data.roles;
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [typeSpeed, setTypeSpeed] = useState(150);
@@ -54,8 +54,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-7xl font-black text-gray-900 dark:text-white mb-6 mt-5 tracking-tight"
         >
-          Where Design <span className="text-gradient">Meets</span> <br />
-          Code
+          {data.headingPart1} <span className="text-gradient">{data.headingPart2}</span> <br />
+          {data.headingPart3}
         </motion.h1>
 
         <motion.div
@@ -73,7 +73,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="max-w-2xl mx-auto text-gray-500 dark:text-zinc-500 text-lg mb-12 leading-relaxed"
         >
-          I build fast, responsive and scalable web applications using React, Laravel and modern web technologies.
+          {data.description}
         </motion.p>
 
         <motion.div 
@@ -91,7 +91,7 @@ const Hero = () => {
           </button>
           
           <a 
-            href="/Ahmad Hassan Zafar.pdf"
+            href={data.resumeLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"

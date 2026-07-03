@@ -1,24 +1,14 @@
 import { motion } from 'framer-motion';
 import { Layout, Code, Server } from 'lucide-react';
 
-const Services = () => {
-  const services = [
-    {
-      icon: <Layout className="text-primary-500" />,
-      title: 'Frontend Development',
-      description: 'Building responsive, high-performance web applications using modern HTML, CSS, and frameworks.',
-    },
-    {
-      icon: <Code className="text-secondary-500" />,
-      title: 'React Developer',
-      description: 'Creating interactive, dynamic, and scalable single-page applications with React and its ecosystem.',
-    },
-    {
-      icon: <Server className="text-accent-500" />,
-      title: 'Backend Solutions',
-      description: 'Developing robust, scalable server-side architectures and efficient database management systems.',
-    },
-  ];
+const Services = ({ data }) => {
+  const iconMap = {
+    Layout: <Layout className="text-primary-500" />,
+    Code: <Code className="text-secondary-500" />,
+    Server: <Server className="text-accent-500" />
+  };
+
+  const services = data.map(item => ({ ...item, icon: iconMap[item.icon] }));
 
   return (
     <section id="services" className="py-24 bg-transparent relative">

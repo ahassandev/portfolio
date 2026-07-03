@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import { GitHubIcon, LinkedInIcon } from './BrandIcons';
 
-const Footer = () => {
-  const socialLinks = [
-    { icon: <GitHubIcon size={20} />, href: 'https://github.com/ahassandev', label: 'GitHub' },
-    { icon: <LinkedInIcon size={20} />, href: 'https://www.linkedin.com/in/ahmad-hassan-41a28b26b/', label: 'LinkedIn' },
-    { icon: <Mail size={20} />, href: 'mailto:ahassandevx@gmail.com', label: 'Email' },
-  ];
+const Footer = ({ data }) => {
+  const iconMap = {
+    GitHubIcon: <GitHubIcon size={20} />,
+    LinkedInIcon: <LinkedInIcon size={20} />,
+    Mail: <Mail size={20} />
+  };
+
+  const socialLinks = data.socialLinks.map(link => ({ ...link, icon: iconMap[link.icon] }));
 
   return (
     <footer className="py-8 bg-transparent relative overflow-hidden">

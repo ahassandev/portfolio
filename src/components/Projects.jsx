@@ -2,53 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Layers } from 'lucide-react';
 import { GitHubIcon } from './BrandIcons';
 
-const Projects = () => {
-
-  const projects = [
-    {
-      title: 'React Portfolio',
-      description: 'A clean and responsive developer portfolio built using React.js and Tailwind CSS. It highlights my technical skills, featured projects, and professional journey with a fast and user-friendly interface.',
-      image: '/image copy.png',
-      tech: ['React', 'Tailwind'],
-      liveUrl: 'https://react-portfolio-coral-xi-14.vercel.app/',
-    },
-    {
-      title: 'Responsive Web Template',
-      description: 'A modern responsive web template built with Bootstrap 5, featuring a mobile-first design, clean layout, and cross-device compatibility.',
-      image: '/image copy 5.png',
-      tech: ['HTML', 'Bootstrap'],
-      liveUrl: 'https://responsive-portfolio-template-ivory.vercel.app/',
-    },
-    {
-      title: 'Software Company Website',
-      description: 'A modern multi-page software company website developed using Bootstrap 5. It includes responsive layouts, reusable components, smooth navigation, and a professional design optimized for all screen sizes.',
-      image: '/image copy 2.png',
-      tech: ['HTML', 'CSS', 'Bootstrap'],
-      liveUrl: 'https://website-main-seven-iota.vercel.app/Services.html',
-    },
-    {
-      title: 'Responsive Web Template',
-      description: 'A modern responsive web template built with Bootstrap 5, featuring a mobile-first design, clean layout, and cross-device compatibility.',
-      image: '/image copy 3.png ',
-      tech: ['Bootstrap'],
-      liveUrl: 'https://responsive-bootstrap-template.vercel.app/#',
-    },
-    {
-      title: 'Micro Data',
-      description: 'A modern and responsive microdata website built with React.js and Tailwind CSS. The application features a clean user interface, reusable components, and a fast, mobile-friendly experience optimized for all screen sizes.',
-      image: '/image copy 4.png',
-      tech: ['React JS', 'Tailwind CSS'],
-      liveUrl: 'https://micro-data-react-app.vercel.app/#',
-    },
-    {
-      title: 'Portfolio 2.0',
-      description: 'Ultra-modern portfolio template for creative developers.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      tech: ['React', 'Framer Motion', 'Tailwind'],
-      liveUrl: '#',
-      githubUrl: '#'
-    }
-  ];
+const Projects = ({ data: projects }) => {
 
   return (
     <section id="projects" className="py-24 bg-transparent relative">

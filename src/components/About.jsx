@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import { Award, Code2, Users2, Zap } from 'lucide-react';
 
-const About = () => {
-  const stats = [
-    { label: 'Years Experience', value: '1+', icon: <Award className="text-primary-500" /> },
-    { label: 'Projects Completed', value: '10+', icon: <Zap className="text-secondary-500" /> },
-    { label: 'Happy Clients', value: '20+', icon: <Users2 className="text-accent-500" /> },
-    { label: 'Tech Stack', value: '15+', icon: <Code2 className="text-primary-500" /> },
-  ];
+const About = ({ data }) => {
+  const iconMap = {
+    Award: <Award className="text-primary-500" />,
+    Zap: <Zap className="text-secondary-500" />,
+    Users2: <Users2 className="text-accent-500" />,
+    Code2: <Code2 className="text-primary-500" />
+  };
+
+  const stats = data.map(item => ({ ...item, icon: iconMap[item.icon] }));
 
   return (
     <section id="about" className="py-24 bg-transparent relative overflow-hidden">
