@@ -8,53 +8,42 @@ const Projects = () => {
     {
       title: 'React Portfolio',
       description: 'A clean and responsive developer portfolio built using React.js and Tailwind CSS. It highlights my technical skills, featured projects, and professional journey with a fast and user-friendly interface.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'Fullstack',
+      image: '/image copy.png',
       tech: ['React', 'Tailwind'],
-      liveUrl: '#',
-      githubUrl: '#'
+      liveUrl: 'https://react-portfolio-coral-xi-14.vercel.app/',
     },
     {
-      title: 'Syncro Task Manager',
-      description: 'Collaborative workspace with drag-and-drop boards and team analytics.',
-      image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'Frontend',
-      tech: ['React', 'Dnd Kit', 'Tailwind'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Responsive Web Template',
+      description: 'A modern responsive web template built with Bootstrap 5, featuring a mobile-first design, clean layout, and cross-device compatibility.',
+      image: '/image copy 5.png',
+      tech: ['HTML', 'Bootstrap'],
+      liveUrl: 'https://responsive-portfolio-template-ivory.vercel.app/',
     },
     {
-      title: 'WeatherWise Dashboard',
-      description: 'Ultra-precise weather forecasting with interactive satellite maps.',
-      image: 'https://images.unsplash.com/photo-1561484930-998b6a7b22e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'Frontend',
-      tech: ['React', 'OpenWeather', 'Chart.js'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Software Company Website',
+      description: 'A modern multi-page software company website developed using Bootstrap 5. It includes responsive layouts, reusable components, smooth navigation, and a professional design optimized for all screen sizes.',
+      image: '/image copy 2.png',
+      tech: ['HTML', 'CSS', 'Bootstrap'],
+      liveUrl: 'https://website-main-seven-iota.vercel.app/Services.html',
     },
     {
-      title: 'DevPulse Community',
-      description: 'Social platform for developers to share code and find collaborators.',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'Fullstack',
-      tech: ['Node.js', 'Socket.io', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Responsive Web Template',
+      description: 'A modern responsive web template built with Bootstrap 5, featuring a mobile-first design, clean layout, and cross-device compatibility.',
+      image: '/image copy 3.png ',
+      tech: ['Bootstrap'],
+      liveUrl: 'https://responsive-bootstrap-template.vercel.app/#',
     },
     {
-      title: 'CryptoTrack Pro',
-      description: 'Real-time cryptocurrency tracking with professional market analysis.',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'Mobile',
-      tech: ['React Native', 'Firebase', 'Web3.js'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Micro Data',
+      description: 'A modern and responsive microdata website built with React.js and Tailwind CSS. The application features a clean user interface, reusable components, and a fast, mobile-friendly experience optimized for all screen sizes.',
+      image: '/image copy 4.png',
+      tech: ['React JS', 'Tailwind CSS'],
+      liveUrl: 'https://micro-data-react-app.vercel.app/#',
     },
     {
       title: 'Portfolio 2.0',
       description: 'Ultra-modern portfolio template for creative developers.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      category: 'Frontend',
       tech: ['React', 'Framer Motion', 'Tailwind'],
       liveUrl: '#',
       githubUrl: '#'
@@ -90,20 +79,20 @@ const Projects = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="glass-card group rounded-3xl overflow-hidden hover:border-primary-500/50 transition-colors"
+                className="glass-card group rounded-3xl overflow-hidden hover:border-primary-500/50 transition-colors flex flex-col h-full"
               >
                 {/* Image Container */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative aspect-video overflow-hidden shrink-0">
                   <img 
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent" />
                 </div>
 
                 {/* Content */}
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
                   <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors">
                     {project.title}
                   </h4>
@@ -111,8 +100,9 @@ const Projects = () => {
                     {project.description}
                   </p>
                   
-                  {/* Tech */}
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  <div className="mt-auto">
+                    {/* Tech */}
+                    <div className="flex flex-wrap gap-2 mb-8">
                     {project.tech.map((t) => (
                       <span key={t} className="text-[10px] uppercase font-black tracking-tighter text-zinc-500 bg-white/5 px-2 py-1 rounded border border-white/5">
                         {t}
@@ -126,6 +116,7 @@ const Projects = () => {
                       <ExternalLink size={18} />
                       <span>Live</span>
                     </a>
+                  </div>
                   </div>
                 </div>
               </motion.div>
