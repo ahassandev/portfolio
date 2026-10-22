@@ -14,11 +14,11 @@
     ]
   },
   "hero": {
-    "roles": ["Frontend Web Developer", "React Developer"],
+    "roles": ["Frontend Web Developer", "React Developer", "Next.js Developer", "Laravel Developer"],
     "headingPart1": "Where Design",
     "headingPart2": "Meets",
     "headingPart3": "Code",
-    "description": "I build fast, responsive and scalable web applications using React, Laravel and modern web technologies.",
+    "description": "I build fast, responsive and scalable web applications using React, Next.js, Laravel and modern web technologies.",
     "resumeLink": "/Ahmad Hassan Zafar.pdf"
   },
   "about": [
@@ -35,6 +35,8 @@
         { "name": "CSS", "level": 95 },
         { "name": "JavaScript", "level": 90 },
         { "name": "React.js", "level": 90 },
+        { "name": "Next.js", "level": 85 },
+        { "name": "Laravel", "level": 80 },
         { "name": "Tailwind CSS", "level": 95 }
       ]
     },

@@ -36,7 +36,7 @@ const About = ({ data }) => {
             transition={{ duration: 0.8 }}
           >
             <h4 className="text-2xl font-bold text-white mb-6">
-              I'm Ahmad Hassan, Currently building AI powered web applications using React and Laravel.
+              I'm Ahmad Hassan Zafar, Frontend Web Developer building modern web applications using React, Next.js, and Laravel.
             </h4>
             <p className="text-zinc-400 text-lg leading-relaxed mb-8">
               Based in the digital world, I specialize in crafting high-end, responsive, 
@@ -73,7 +73,7 @@ const About = ({ data }) => {
             <div className="relative z-10 rounded-3xl overflow-hidden aspect-square lg:aspect-auto lg:h-[500px] border border-white/10 group">
               <img 
                 src="/ahmad.png"
-                alt="Profile"
+                alt="Ahmad Hassan Zafar - Frontend Web Developer"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60" />

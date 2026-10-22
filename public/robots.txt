@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://react-portfolio-coral-xi-14.vercel.app/sitemap.xml

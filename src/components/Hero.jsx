@@ -47,13 +47,13 @@ const Hero = ({ data }) => {
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
 
-
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-7xl font-black text-gray-900 dark:text-white mb-6 mt-5 tracking-tight"
         >
+          <span className="sr-only">Ahmad Hassan Zafar - Frontend Web Developer (React, Next.js, Laravel). </span>
           {data.headingPart1} <span className="text-gradient">{data.headingPart2}</span> <br />
           {data.headingPart3}
         </motion.h1>
