@@ -51,7 +51,7 @@ const Hero = ({ data }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-7xl font-black text-gray-900 dark:text-white mb-6 mt-5 tracking-tight"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-black text-gray-900 dark:text-white mb-6 mt-4 sm:mt-5 tracking-tight"
         >
           <span className="sr-only">Ahmad Hassan Zafar - Frontend Web Developer (React, Next.js, Laravel). </span>
           {data.headingPart1} <span className="text-gradient">{data.headingPart2}</span> <br />
@@ -62,16 +62,16 @@ const Hero = ({ data }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-3xl text-gray-600 dark:text-zinc-400 font-medium mb-12 mt-3 h-8"
+          className="text-lg sm:text-2xl md:text-3xl text-gray-600 dark:text-zinc-400 font-medium mb-8 sm:mb-12 mt-2 sm:mt-3 min-h-[2.5rem] sm:min-h-[2.25rem] flex items-center justify-center"
         >
-          I'm a <span className="text-gray-900 dark:text-white border-r-2 border-primary-500 pr-1">{text}</span>
+          <span>I'm a&nbsp;</span><span className="text-gray-900 dark:text-white border-r-2 border-primary-500 pr-1">{text}</span>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-2xl mx-auto text-gray-500 dark:text-zinc-500 text-lg mb-12 leading-relaxed"
+          className="max-w-2xl mx-auto text-gray-600 dark:text-zinc-400 text-base sm:text-lg mb-8 sm:mb-12 leading-relaxed px-2 sm:px-0"
         >
           {data.description}
         </motion.p>
@@ -80,11 +80,11 @@ const Hero = ({ data }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xs sm:max-w-none mx-auto"
         >
           <button 
             onClick={() => scrollToSection('projects')}
-            className="btn-primary"
+            className="btn-primary w-full sm:w-auto justify-center cursor-pointer"
           >
             <span>View My Work</span>
             <ArrowRight size={20} />
@@ -94,7 +94,7 @@ const Hero = ({ data }) => {
             href={data.resumeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary"
+            className="btn-secondary w-full sm:w-auto justify-center cursor-pointer"
           >
             My resume
             <Download size={20} />
@@ -102,14 +102,12 @@ const Hero = ({ data }) => {
         </motion.div>
       </div>
 
-
-
       {/* Floating Elements (Visual Decoration) */}
-      <div className="absolute top-1/4 left-10 md:left-20 animate-float opacity-20">
-        <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary-500 to-transparent rotate-12 blur-sm" />
+      <div className="absolute top-1/4 left-6 md:left-20 animate-float opacity-20 pointer-events-none hidden sm:block">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-transparent rotate-12 blur-sm" />
       </div>
-      <div className="absolute bottom-1/4 right-10 md:right-20 animate-float-delayed opacity-20">
-        <div className="w-16 h-16 rounded-full bg-linear-to-br from-accent-500 to-transparent -rotate-12 blur-sm" />
+      <div className="absolute bottom-1/4 right-6 md:right-20 animate-float-delayed opacity-20 pointer-events-none hidden sm:block">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-500 to-transparent -rotate-12 blur-sm" />
       </div>
     </section>
   );

@@ -13,8 +13,8 @@ const Home = () => {
   const { isDarkMode } = useTheme();
   
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode ? 'bg-dark text-white' : 'bg-light text-gray-900'
+    <div className={`min-h-screen w-full max-w-full overflow-x-hidden transition-colors duration-300 ${
+      isDarkMode ? 'bg-dark text-white' : 'bg-gray-50 text-gray-900'
     }`}>
       <Navbar />
       <Hero data={websiteData.hero} />

@@ -93,7 +93,7 @@
     {
       "title": "Responsive Web Template",
       "description": "A modern responsive web template built with Bootstrap 5, featuring a mobile-first design, clean layout, and cross-device compatibility.",
-      "image": "/image copy 3.png ",
+      "image": "/image copy 3.png",
       "tech": ["Bootstrap"],
       "liveUrl": "https://responsive-bootstrap-template.vercel.app/#"
     },
