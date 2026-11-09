@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Layers } from 'lucide-react';
-import { GitHubIcon } from './BrandIcons';
+import { ExternalLink } from 'lucide-react';
 
 const Projects = ({ data: projects }) => {
 
@@ -66,17 +65,19 @@ const Projects = ({ data: projects }) => {
                     </div>
 
                     {/* Links */}
-                    <div className="flex items-center gap-4">
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="flex items-center gap-2 text-gray-900 dark:text-white font-bold hover:text-primary-500 transition-colors text-sm"
-                      >
-                        <ExternalLink size={16} />
-                        <span>Live Preview</span>
-                      </a>
-                    </div>
+                    {project.liveUrl && (
+                      <div className="flex items-center gap-4 pt-3 border-t border-gray-200/60 dark:border-white/5">
+                        <a 
+                          href={project.liveUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center gap-2 text-gray-900 dark:text-white font-bold hover:text-primary-500 transition-colors text-sm"
+                        >
+                          <ExternalLink size={16} />
+                          <span>Live Preview</span>
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
